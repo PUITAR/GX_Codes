@@ -1,0 +1,96 @@
+C51 COMPILER V9.51   MAIN                                                                  06/30/2022 16:39:02 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\output\main.obj
+COMPILER INVOKED BY: D:\LenovoSoftstore\Install\KEIL\C51\BIN\C51.EXE source\main.c BROWSE INCDIR(.\inc) DEBUG OBJECTEXTE
+                    -ND PRINT(.\list\main.lst) TABS(2) OBJECT(.\output\main.obj)
+
+line level    source
+
+   1          #include "STC15F2K60S2.H"        //±ØÐë¡£
+   2          #include "sys.H"                 //±ØÐë¡£
+   3          #include "displayer.H" 
+   4          #include "Key.H"
+   5          #include "adc.H"
+   6          
+   7          code unsigned long SysClock=11059200;         //±ØÐë¡£¶¨ÒåÏµÍ³¹¤×÷Ê±ÖÓÆµÂÊ(Hz)£¬ÓÃ»§±ØÐëÐÞ¸Ä³ÉÓëÊµ¼Ê¹¤×÷Æµ
+             -ÂÊ£¨ÏÂÔØÊ±Ñ¡ÔñµÄ£©Ò»ÖÂ
+   8          #ifdef _displayer_H_                          //ÏÔÊ¾Ä£¿éÑ¡ÓÃÊ±±ØÐë¡££¨ÊýÂë¹ÜÏÔÊ¾ÒëÂë±í£¬ÓÃ‘ô¿ÉÐÞ¸Ä¡¢Ôö¼ÓµÈ
+             -£© 
+   9          code char decode_table[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x00,0x08,0x40,0x01, 0x41, 0x4
+             -8, 
+  10                          /* ÐòºÅ:   0   1    2    3    4     5    6    7   8    9   10    11   12   13    14     15    
+             - */
+  11                          /* ÏÔÊ¾:   0   1    2    3    4     5    6    7   8    9  (ÎÞ)   ÏÂ-  ÖÐ-  ÉÏ-  ÉÏÖÐ-  ÖÐÏ
+             -Â-   */  
+  12                                   0x3f|0x80,0x06|0x80,0x5b|0x80,0x4f|0x80,0x66|0x80,0x6d|0x80,0x7d|0x80,0x07|0x80,0x
+             -7f|0x80,0x6f|0x80 };  
+  13                       /* ´øÐ¡Êýµã     0         1         2         3         4         5         6         7      
+             -   8         9        */
+  14          #endif
+  15          /* ³õÊ¼Ê±ÖÐ¼äÁ½Î»ledµÆÁÁÆð£¬ÓÃKey3Ñ¡ÔñÐèÒªÒÆ¶¯µÄledµÆ */
+  16          unsigned char l1 = 0x10;    
+  17          unsigned char l2 = 0x08;
+  18          char mode = 0;
+  19          
+  20          void my10mS_callback(){
+  21   1        char k;
+  22   1        k = GetAdcNavAct(enumAdcNavKey3);
+  23   1        if(k == enumKeyPress) mode = !mode;       //ÇÐ»»ÐèÒªÒÆ¶¯µÄµÆ
+  24   1        k = GetAdcNavAct(enumAdcNavKeyLeft);
+  25   1        if(k == enumKeyPress) {
+  26   2          if(mode == 0) {
+  27   3            l1 = l1 << 1;
+  28   3            if(l1 == 0) l1 = 0x01;
+  29   3          }
+  30   2          else {
+  31   3            l2 = l2 << 1;
+  32   3            if(l2 == 0) l2 = 0x01;
+  33   3          }
+  34   2        }
+  35   1        k = GetAdcNavAct(enumAdcNavKeyRight);
+  36   1        if(k == enumKeyPress) {
+  37   2          if(mode == 0) {
+  38   3            l1 = l1 >> 1;
+  39   3            if(l1 == 0) l1 = 0x80;
+  40   3          }
+  41   2          else {
+  42   3            l2 = l2 >> 1;
+  43   3            if(l2 == 0) l2 = 0x80;
+  44   3          }
+  45   2        }
+  46   1        LedPrint(l1 | l2);
+  47   1      }
+C51 COMPILER V9.51   MAIN                                                                  06/30/2022 16:39:02 PAGE 2   
+
+  48          
+  49          void main() 
+  50          {
+  51   1        //³õÊ¼»¯
+  52   1        AdcInit(ADCincEXT);
+  53   1        DisplayerInit();  
+  54   1        LedPrint(l1|l2);
+  55   1        SetDisplayerArea(0,0);
+  56   1        //ÉèÖÃ»Øµ÷º¯Êý
+  57   1        SetEventCallBack(enumEventSys10mS, my10mS_callback);
+  58   1        MySTC_Init();     
+  59   1        while(1)              
+  60   1        { 
+  61   2          MySTC_OS();    
+  62   2        }              
+  63   1      }                 
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    141    ----
+   CONSTANT SIZE    =     30    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      3    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
