@@ -1,0 +1,55 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\0LEARNINGFILES\LEARN\CSTech\STC-B\中期检查\GX_Codes\6-震动\STC_Demo.uvproj
+Project File Date:  05/24/2022
+
+<h2>Output:</h2>
+
+InitXmlModel(): using folder 'D:\KEIL MDK\ARM\PACK'
+Parsing RTE Files ... 
+failed.
+Build target 'Target 1'
+compiling main.c...
+source\main.c(44): warning C206: 'displayerInit': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SEG7PRINT?DISPLAYER
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPRINT?DISPLAYER
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=44.7 xdata=123 code=2720
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+source\main.c(43): warning C206: 'displayerInit': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPSTATUS?BEEP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SEG7PRINT?DISPLAYER
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPRINT?DISPLAYER
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=44.7 xdata=123 code=2716
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=36.7 xdata=111 code=2348
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 2 Warning(s).

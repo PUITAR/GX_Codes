@@ -1,0 +1,115 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\0LEARNINGFILES\LEARN\CSTech\STC-B\ÖÐÆÚ¼ì²é\GX_Codes\1\STC_Demo.uvproj
+Project File Date:  05/24/2022
+
+<h2>Output:</h2>
+
+InitXmlModel(): using folder 'D:\KEIL MDK\ARM\PACK'
+Parsing RTE Files ... 
+failed.
+Build target 'Target 1'
+compiling main.c...
+source\main.c(11): error C141: syntax error near '0x3f'
+source\main.c(26): error C141: syntax error near '{'
+source\main.c(27): error C141: syntax error near 'if'
+source\main.c(27): error C141: syntax error near '!=', expected ')'
+source\main.c(27): error C231: 'a': redefinition
+source\main.c(27): error C247: non-address/-constant initializer
+source\main.c(27): error C231: 'a': redefinition
+source\main.c(28): error C141: syntax error near 'else'
+source\main.c(28): error C279: 'a': multiple initialization
+source\main.c(28): error C231: 'a': redefinition
+source\main.c(28): error C231: 'a': redefinition
+source\main.c(29): error C231: '_LedPrint': redefinition
+source\main.c(30): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+source\main.c(11): error C141: syntax error near '0x3f'
+source\main.c(26): error C141: syntax error near '{'
+source\main.c(28): error C141: syntax error near 'if'
+source\main.c(28): error C141: syntax error near '!=', expected ')'
+source\main.c(28): error C231: 'a': redefinition
+source\main.c(28): error C247: non-address/-constant initializer
+source\main.c(28): error C231: 'a': redefinition
+source\main.c(29): error C141: syntax error near 'else'
+source\main.c(29): error C279: 'a': multiple initialization
+source\main.c(29): error C231: 'a': redefinition
+source\main.c(29): error C231: 'a': redefinition
+source\main.c(30): error C231: '_LedPrint': redefinition
+source\main.c(31): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+source\main.c(13): error C141: syntax error near '0x3f'
+source\main.c(30): error C183: unmodifiable lvalue
+source\main.c(31): error C183: unmodifiable lvalue
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MY100MS_CALLBACK?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPTIMER?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETBEEPTIMER?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETCCP0?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLRBEEPPIN?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETEVENTCALLBACK?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=42.7 xdata=122 code=2441
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MY100MS_CALLBACK?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPTIMER?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETBEEPTIMER?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETCCP0?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLRBEEPPIN?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETEVENTCALLBACK?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=42.7 xdata=122 code=2441
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETULTRASONIC?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETBEEPTIMER?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETBEEPTIMER?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETCCP0?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLRBEEPPIN?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SETEVENTCALLBACK?SYS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GETSYSPERFORMANCE?SYS
+Program Size: data=41.7 xdata=122 code=2428
+creating hex file from ".\output\BSP_Demo"...
+".\output\BSP_Demo" - 0 Error(s), 7 Warning(s).
